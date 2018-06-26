@@ -22,7 +22,7 @@
     "@deepsweet/eslint-config-node-ts": "^0.1.0",
     "@deepsweet/start-preset-node-ts-lib": "^0.2.0",
     "@types/node": "^10.3.1",
-    "memfs": "^2.9.0",
+    "memfs": "^2.9.1",
     "mocku": "^0.2.0",
     "spyfn": "^0.1.1",
     "tape-promise": "^3.0.0",
