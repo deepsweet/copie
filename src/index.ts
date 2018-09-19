@@ -1,22 +1,15 @@
-import {
-  createReadStream,
-  createWriteStream,
-  lstat,
-  chmod,
-  chown,
-  utimes
-} from 'fs'
-import makethen from 'makethen'
+import { promisify } from 'util'
+import { createReadStream, createWriteStream, lstat, chmod, chown, utimes } from 'fs'
 
-const pChmod = makethen(chmod)
-const pChown = makethen(chown)
-const pLstat = makethen(lstat)
-const pUtimes = makethen(utimes)
+const pChmod = promisify(chmod)
+const pChown = promisify(chown)
+const pLstat = promisify(lstat)
+const pUtimes = promisify(utimes)
 
 // TODO: extract me
 const toUnixTimestamp = (date: Date): number => Math.trunc(date.getTime() / 1000)
 
-const copie = async (fromPath: string, toPath: string) => {
+const copie = async (fromPath: string, toPath: string): Promise<void> => {
   await new Promise<void>((resolve, reject) => {
     const readStream = createReadStream(fromPath)
     const writeStream = createWriteStream(toPath)

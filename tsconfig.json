@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "strict": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
     "pretty": true,
-    "lib": ["esnext"],
+    "lib": ["esnext", "dom"],
     "moduleResolution": "node"
   },
   "exclude": ["build/", "coverage/", "node_modules/"]

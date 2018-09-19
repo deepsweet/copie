@@ -1,9 +1,6 @@
-import test from 'tape-promise/tape'
+import test from 'blue-tape'
 import { createFsFromVolume, Volume } from 'memfs'
 import { mock, unmock } from 'mocku'
-import { createSpy, getSpyCalls } from 'spyfn'
-import makethen from 'makethen'
-import { Stats } from 'fs'
 
 test('copy', async (t) => {
   const vol = Volume.fromJSON({
@@ -35,8 +32,6 @@ test('preserve stats', async (t) => {
     '/test/1.md': 'foo'
   })
   const fs = createFsFromVolume(vol)
-  type Lstat = (path: string, cb: (err: any, stats: Stats) => void) => void
-  const lstat = makethen(fs.lstat as Lstat)
 
   mock('../src/', { fs })
 
@@ -44,8 +39,8 @@ test('preserve stats', async (t) => {
 
   await copie('/test/1.md', '/test/2.md')
 
-  const stats1 = await lstat('/test/1.md')
-  const stats2 = await lstat('/test/2.md')
+  const stats1 = fs.lstatSync('/test/1.md')
+  const stats2 = fs.lstatSync('/test/2.md')
 
   t.equal(
     stats1.uid.toString(),
