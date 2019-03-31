@@ -10,7 +10,6 @@ Copy a file.
 * no side effects such as `stdout`
 * Promise only API
 * preserve `uid`, `gid`, `mode`, `atime` and `mtime` stats
-* ESM
 
 ## Requirements
 

@@ -5,7 +5,8 @@
     "noEmit": true,
     "pretty": true,
     "lib": ["esnext", "dom"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "exclude": ["build/", "coverage/", "node_modules/"]
 }
