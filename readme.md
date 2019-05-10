@@ -1,6 +1,6 @@
 # copie
 
-[![npm](https://img.shields.io/npm/v/copie.svg?style=flat-square)](https://www.npmjs.com/package/copie) [![tests](https://img.shields.io/travis/deepsweet/copie/master.svg?label=tests&style=flat-square)](https://travis-ci.org/deepsweet/copie) [![coverage](https://img.shields.io/codecov/c/github/deepsweet/copie.svg?style=flat-square)](https://codecov.io/github/deepsweet/copie)
+[![npm](https://img.shields.io/npm/v/copie.svg?style=flat-square)](https://www.npmjs.com/package/copie) [![tests](https://img.shields.io/travis/deepsweet/copie/master.svg?label=tests&style=flat-square)](https://travis-ci.org/deepsweet/copie) [![coverage](https://img.shields.io/codecov/c/github/deepsweet/copie.svg?style=flat-square)](https://codecov.io/github/deepsweet/copie) [![Greenkeeper badge](https://badges.greenkeeper.io/deepsweet/copie.svg)](https://greenkeeper.io/)
 
 Copy a file.
 
